@@ -1,0 +1,16 @@
+^\d{3}.\d{3}.\d{3}-\d{2}$
+[.-]
+
+(\w+),\s(\w+) - {fistName: "$2", lastName: "$1"}
+
+\[(.*?)\]\((.*?)\) - <a href="$2">$1</a>
+
+123.123.123-14
+567.567.567-41
+890.890.890-23
+
+Wendel, Erick
+Lima, Joao
+
+
+O [Joao Vitor](http://joaovitor.com) trabalha com desenvolvimento full stack. Trabalhando com NodeJS e React. A URL do linkedin é [URL](https://www.linkedin.com/in/jo%C3%A3o-vitor-brietzke-de-lima-804a60209/)
