@@ -11,6 +11,6 @@ const TextProcessorFacade = require("./TextProcessorFacade");
   const data = await pdf(dataBuffer);
 
   const instance = new TextProcessorFacade(data.text);
-  const peoples = instance.getPeoplesFromPDF()
-  console.log('peoples', peoples)
+  const people = instance.getPeopleFromPDF()
+  console.log('people', people)
 })();
