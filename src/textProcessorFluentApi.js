@@ -1,3 +1,4 @@
+const Person = require("./Person");
 const { evaluateRegex } = require("./utils");
 
 class TextProcessorFluentApi {
@@ -22,12 +23,18 @@ class TextProcessorFluentApi {
     this.#content = this.#content.map((line) => line.split(splitRegex));
     return this;
   }
+
   removeEmptyCharacters() {
     const trimRegex = evaluateRegex(/^\s+|\s+$|\n/g);
 
     this.#content = this.#content.map((item) =>
       item.map((line) => line.replace(trimRegex, ""))
     );
+    return this;
+  }
+
+  mapPerson() {
+    this.#content = this.#content.map((item) => new Person(item));
     return this;
   }
 
